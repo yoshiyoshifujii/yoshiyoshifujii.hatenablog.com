@@ -2,5 +2,23 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "local>hatena/renovate-config"
+  ],
+  "timezone": "Asia/Tokyo",
+  "schedule": [
+    "after 02:00 and before 05:00 every weekday"
+  ],
+  "labels": [
+    "dependencies",
+    "renovate"
+  ],
+  "dependencyDashboard": false,
+  "packageRules": [
+    {
+      "matchManagers": [
+        "github-actions"
+      ],
+      "groupName": "github-actions workflows",
+      "separateMajorMinor": true
+    }
   ]
 }
